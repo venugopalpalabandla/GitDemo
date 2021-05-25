@@ -8,23 +8,19 @@ import { Component } from '@angular/core';
 
 export class AppComponent {
   title = 'SampleApp';
-firstName:string="Ranjith";
-lastName:string="Paleti";
-age:number=29;
-receiveNewsLetter:boolean=true;
-gender:string="male";
-country:string="india";
-address:string="https://www.facebook.com";
-changeData(){
-
-this.firstName="Kumar";
-this.lastName="Jhon";
-this.age=33;
-this.receiveNewsLetter=false;
-this.gender="male";
-this.country="US";
-this.address="https://mail.google.com/";
-
-}
+  userName:string="";
+  password:string="";
+  confirmPassword:string='';
+  acceptlicenceagreement:boolean=false;
+  gender:string='';
+  country:string='';
+  msg:string="";
+  checkLogin(){
+   
+      this.msg="userName:"+this.userName+ '<break>Password:'+this.password+'<br>confirmpassword:'+this.confirmPassword+
+      "<br>acceptlicenceagreement"+this.acceptlicenceagreement+"<br>gender"+this.gender+"<br>country"+this.country;
+    
+  
+  }
 
 }
