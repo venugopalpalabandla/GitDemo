@@ -1,33 +1,24 @@
-<div><div>
-
-
-  <h2>Adding sub branch </h2>
-</div>
-  <h2>Interpolation Binding </h2>
-    <h3>firstName:{{firstName}}<br>
-  LastName:{{lastName}}<br>
-  Age:{{age}}<br>
-  Receive News Letter:{{receiveNewsLetter}}<br>
-  Gender:{{gender}}<br>
-  Country:{{country}}<hr></h3>
-</div>
 <div>
-  <h2>Property Binding </h2>
-  <a [href]="address">Click Here</a><hr>
+<form>
+<h4>Registration  Form</h4><br>
+UserName:<input type="text" [(ngModel)]="userName" name="username"><br><br><br>
+password:<input type="password" [(ngModel)]="password" name="password"><br><br><br>
+confirmpassword:<input type="password" [(ngModel)]="confirmPassword" name="confirmpassword"><br><br><br>
+<input type="checkbox" [(ngModel)]="acceptlicenceagreement" name="acceptlicenceagreement">
+i accept licence agreement<br>
+Gender:
+<input type="radio" [(ngModel)]="gender" value="male" name="gender">Male
+<input type="radio" [(ngModel)]="gender" value="female" name="gender">FeMale<br><br>
+Country:
+<select [(ngModel)]="country" name="country" >
+<option value="please select ">Please select </option>
+<option value="india">India</option>
+<option value="uk">UK</option>
+<option value="s">US</option>
+</select>
+<input type="submit" value="register"   (click)="checkLogin()"><br><br><br>
+
+{{msg}}
+</form> 
+
 </div>
-
-<div>
-  <h2>Two Way Binding </h2>
-firstName<input type="text"  [(ngModel)]="firstName"/><br>
-LastName<input type="text"  [(ngModel)]="lastName"/><br>
-Age<input type="text"  [(ngModel)]="age"/><br>
-Receive News Letter<input type="checkbox"  [(ngModel)]="receiveNewsLetter"/><br>
-
-
-Gender:<br>
-<input type="radio"  [(ngModel)]="gender" value="Male"/>Male
-<input type="radio"  [(ngModel)]="gender" value="Female"/>Female<br>
-
-</div>
-<h2>event Binding </h2>
-<input type="button" value="ChangeData" (click)="changeData()">
